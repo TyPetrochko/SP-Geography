@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="467.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.AboutController">
+  <children>
+    <Label layoutX="182.0" layoutY="14.0" text="About">
+      <font>
+        <Font size="38.0" />
+      </font>
+    </Label>
+    <TextArea editable="false" focusTraversable="false" layoutX="59.0" layoutY="100.0" prefHeight="344.0" prefWidth="354.0" text="&#9;This project was created by Tyler Petrochko as a three-year academy scholars project at Germantown Academy, with help from history teacher Mark Stephens 1760. &#10;&#10;&#9;Tyler is an avid programmer, electronics-tinkerer, and wrestler, and plans to pursue a career in computer science. His past projects include a prototype Binary Array Linked-List Data structure, and an External Server Verification Method to Prevent Against SSL-Stripping.&#10;&#10;&#10;&#10;&#10;&#10;For feedback, contact at:&#10;tpetr14@germantownacademy.org" wrapText="true" />
+    <Button layoutX="209.0" layoutY="490.0" mnemonicParsing="false" onAction="#Okay" text="Close" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="209.0" prefHeight="209.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.PopupWindowController">
+  <children>
+    <Label id="label" alignment="CENTER" layoutX="24.0" layoutY="23.0" prefWidth="572.0" text="Do you wish to continue?">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button id="ok" cancelButton="true" layoutX="260.0" layoutY="170.0" mnemonicParsing="false" onAction="#Okay" prefWidth="100.0" text="Okay" />
+    <Label id="text" alignment="CENTER" layoutX="24.0" layoutY="81.0" minHeight="20.999908447265625" opacity="0.8" prefHeight="55.0" prefWidth="572.0" text="Ok?" wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

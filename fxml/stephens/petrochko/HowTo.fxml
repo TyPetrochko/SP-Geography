@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="386.0" prefHeight="386.0" prefWidth="525.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.HowToController">
+  <children>
+    <TabPane prefHeight="446.0" prefWidth="525.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="General">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="511.0">
+              <children>
+                <TextArea editable="false" layoutX="14.0" layoutY="45.0" prefHeight="284.0000915527344" prefWidth="497.0" text="&#9;Our program is a flexible, easy-to-use, student-friendly geography teaching environment. It was designed to be dynamic, and unlike similar programs, to give developers the ability to create their own map packs in order to distribute their own quizzes. &#10;&#10;&#9;Upon startup, users are prompted with three different options:&#10;-Make a New Quiz&#10;-Settings&#10;-Take a Preset Quiz&#10;&#10;See additional tabs for more information.&#10;" wrapText="true" />
+                <Label layoutX="223.0" layoutY="8.0" text="General">
+                  <font>
+                    <Font name="System Bold" size="22.0" fx:id="x1" />
+                  </font>
+                </Label>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Settings">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="511.0">
+              <children>
+                <TextArea editable="false" layoutX="14.0" layoutY="45.0" prefHeight="284.0" prefWidth="497.0" text="&#9;Settings allow the user to customize specific details of the program. It is recommended that users do not change any of the settings unless they are 100% aware of what they are doing. In case settings are accidentally changed, the Restore Default Settings option &#10;allows the settings to be restored to their installation default. &#10;&#10;Changing Folders/Graphic Options&#10;&#10;&#9;In the Settings menu, the Quizzes Folder is the default directory that to store preset quizzes. When the Take a Preset Quiz window looks for quizzes, this is the first place it looks. Typically this directory is restored for preset quizzes (ones that come with the program). In future updates, the Import Quiz button allows the user to easily select a quiz to place in this folder (for now – it must be manually moved).&#10;&#10;&#9;Map Pack Folder is the default directory to store map packs. These map packs can be either default or user-created, but poorly-created map packs can lead to a program runtime-error – so make sure you only use ones from trusted sources.&#10;&#10;&#9;Progress Folder is where all in-progress or custom-made quizzes are stored. See Making a Quiz tab.&#10;&#10;&#9;City Graphic is a .png file used to pinpoint cities when taking a quiz. It is highly recommended to use the default graphic, but others can be used instead.&#10;" wrapText="true" />
+                <Label font="$x1" layoutX="220.0" layoutY="8.0" text="Settings" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Making a Quiz">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextArea editable="false" layoutX="14.0" layoutY="45.0" prefHeight="284.0" prefWidth="498.0" text="&#9;The Make a New Quiz option allows users to design their own custom quizzes from a variety of map packs. Map packs are included with the program, but can also be found online, or created personally (see Map Packs tab). &#10;&#10;Loading a Map Pack&#10;&#10;&#9;Use the Load Map Pack dropdown menu to select the map pack you’d like to work with. Immediately, all the geographical features from the map pack should pop up on the right-hand side of the screen in outline format. If the program freezes or no geographical features appear, the map pack is likely corrupt.&#10;&#10;Making a Quiz&#10;&#10;&#9;To begin making a quiz, first select elements to include in your quiz from the right-hand side of the screen by clicking within the checkboxes appearing next to the features’ names. By default, selecting a geographical feature will select all of the feature’s children features (so, for example, selecting New York automatically selects Albany as well, since Albany is IN New York).&#10;&#10;To deselect elements from your quiz, double click the feature you’d like to remove on the left-hand screen, or simply un-select the corresponding checkbox on the right-hand side.&#10;&#10;The Quiz Type dropdown menu lets you select whether you want your quiz to be Point-Click, or Drag-Drop, and whether you’d like a Practice or Quiz. Point-Click requires the user to only click on the element when it is prompted, whereas Drag-Drop requires the user to drag the feature onto the map. For now, Practice and Quiz modes are only different in name, but this will likely be changed in future updates.&#10;&#10;Exporting or Taking a Quiz&#10;&#10;To export (distribute) your quiz, hit the Export button. This prompts a Save dialog box, which you can use to place where you’d like to export your quiz to. To take your quiz, press the Take It! button.&#10;" wrapText="true" />
+                <Label font="$x1" layoutX="188.0" layoutY="7.0" text="Making a Quiz" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Taking a Quiz">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextArea editable="false" layoutX="14.0" layoutY="45.0" prefHeight="284.0" prefWidth="497.0" text="&#9;To take a quiz, either create a custom quiz and press Take It! or choose the Take a Preset Quiz from the Main Screen. The Take a Preset Quiz menu automatically updates a list of default-included and user-made quizzes. To take one, select the quiz and click Take It!.&#10;&#10;Navigating the Quiz-Taking Menu&#10;&#10;&#9;The Quiz-Taking is divided into four tabs: Main, Quiz, Round, and About. The Main tab displays pertinent information about your quiz, such as its name and Quiz-Type, as well as buttons that allow you to start over or return to the Main Screen.&#10;&#9;Once you press Begin Quiz, the Quiz tab automatically loads. In this tab, you are prompted to either click or drag certain geographical features in the correct location. If correct, a short graphic will appear and the next feature will be prompted. If incorrect, a different graphic will appear and you will not move on to the next feature. The % Correct and % Complete labels show your score and percent-finished respectively. Once all features have been placed, the Quiz tab is hidden again.&#10;&#10;&#9;The Round tab displays which geographical features you got correct and incorrect, and also keeps track of your time during the quiz. The Practice Missed feature allows you to take a new quiz with only the elements you got incorrect included. The Retake Quiz feature allows you to restart the quiz again.&#10;&#10;The About tab shows developer and contact information.&#10;&#10;Quizzing Features&#10;&#10;&#9;Depending on whether the quiz is Drag-Drop or Point-Click, you will either be prompted to drag features onto the map or simply click on them. Each mode lends itself to a variety of geographical skills, and one is not necessarily better or easier than the other. &#10;&#10;&#9;In Drag-Drop mode, click the graphic of the feature and drag it out onto the map. When its location is roughly accurate (within 10 pixels), release the element. It should snap into its correct place if correct, or disappear if incorrect.&#10;&#10;&#9;In Point-Click mode, use the map to locate where the feature belongs, and click the feature. In either mode, if you are stuck, click the Give Up button to move on.&#10;" wrapText="true" />
+                <Label font="$x1" layoutX="192.0" layoutY="8.0" text="Taking a Quiz" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Map Packs">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextArea editable="false" layoutX="14.0" layoutY="45.0" prefHeight="284.0" prefWidth="497.0" text="Map Packs&#10;&#10;&#9;Map packs are folder systems that the program initializes in order to allow the user to design custom quizzes. Several are included in the program, but others can be created manually. However, an improperly-created map pack can crash the program, so be wary of which map packs you use. If you are interested in creating a custom map pack, continue reading.&#10;&#10;Types of Geographical Features&#10;&#10;A) folder + .txt + .png (category and feature: state, country, etc.)&#10;B) folder (category: NE America, SE America)&#10;C) .txt (a city or pinpoint location)&#10;D) .txt +.png (feature: Mississippi River, Bucks County)&#10;E) folder + .png (background)&#10;&#10;Setting Up a Map Pack&#10;&#10;&#9;A map pack is a folder, the name of which is the name of the map pack, i.e &quot;My Map Pack&quot;. Inside My Map Pack are the following:&#10;&#10;-Background folder, with a name to describe what the map pack includes, i.e. &quot;South America&quot;&#10;-A corresponding .png image with a MATCHING name, which is the background for the map pack - &quot;South America.png&quot;&#10;-(OPTIONAL) A .txt file of a DIFFERENT name, which includes a brief (250 or fewer words) description of the map pack, i.e. &quot;About.txt&quot;&#10;&#10;&#9;Inside the background folder is all of the geo objects that will be viewed by the user. All corresponding components of geo objects must be under the same name, so the &quot;Pennsylvania&quot; folder must have a corresponding &quot;Pennsylvania.png&quot; and a &quot;Pennsylvania.txt&quot; (assuming it's a category and a feature).&#10;&#10;Redundancy&#10;&#10;&#9;A key component of Stephens-Petrochko is redundancy, an ease-of-use feature that allows certain geo objects to be in several different places in the map pack at the same time. For example, &quot;Harrisburg&quot; is the capital of Pennsylvania, so it makes sense to put it under &quot;Pennsylvania&quot;. However, if the user wants to deselect all the capitals at once, he/she would have to go into every single state and deselect them manually. To solve this, the map pack developer could include another geo object (a folder/category) in the same folder as the states that includes ALL the capitals. So, Harrisburg will exist under Pennsylvania and Capitals, and selecting it in one place will select it in all other places (the same goes for deselection). IF REDUNDANCY IS TO BE EMPLOYED, MATCHING GEO-OBJECTS MUST HAVE CORRESPONDING names and corresponding data (picture and coordinates) else bugs may occur.&#10;&#10;" wrapText="true" />
+                <Label font="$x1" layoutX="207.0" layoutY="8.0" text="Map Packs" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <Separator layoutX="14.0" layoutY="450.0" prefWidth="497.0" />
+    <Button layoutX="235.0" layoutY="411.0" mnemonicParsing="false" onAction="#Close" text="Close" />
+  </children>
+</AnchorPane>

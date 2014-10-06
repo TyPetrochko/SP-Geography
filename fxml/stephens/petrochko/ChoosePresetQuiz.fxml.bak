@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="463.0" prefWidth="356.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.ChoosePresetQuizController">
+  <children>
+    <MenuBar prefWidth="356.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Label layoutX="85.0" layoutY="40.0" text="Choose a Quiz">
+      <font>
+        <Font name="System Bold" size="28.0" />
+      </font>
+    </Label>
+    <ListView fx:id="theListView" focusTraversable="false" layoutX="78.0" layoutY="100.0" prefHeight="252.0" prefWidth="200.0" />
+    <HBox alignment="TOP_CENTER" layoutX="74.0" layoutY="412.0" prefHeight="38.0" prefWidth="209.0" spacing="20.0">
+      <children>
+        <Button mnemonicParsing="false" text="Take It!" />
+        <Button mnemonicParsing="false" onAction="#backPressed" prefWidth="59.000099999997474" text="Back" />
+      </children>
+    </HBox>
+    <Label fx:id="label" layoutX="78.0" layoutY="358.0" opacity="0.75" prefHeight="21.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

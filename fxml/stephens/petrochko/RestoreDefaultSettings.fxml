@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="209.0" prefHeight="209.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.RestoreDefaultSettingsController">
+  <children>
+    <Label id="label" alignment="CENTER" layoutX="14.0" layoutY="22.0" prefWidth="572.0" text="Restore Default Settings">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <HBox id="HBox" alignment="CENTER" layoutX="199.0" layoutY="169.0" prefWidth="203.0" spacing="5.0">
+      <children>
+        <Button id="ok" cancelButton="true" mnemonicParsing="false" onAction="#Okay" prefWidth="98.0" text="Okay" />
+      </children>
+    </HBox>
+    <Label id="text" alignment="CENTER" layoutX="14.0" layoutY="80.0" minHeight="20.999908447265625" opacity="0.8" prefHeight="55.0" prefWidth="572.0" text="The settings will be restored to default upon restarting the program." wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

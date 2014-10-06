@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="332.0" minWidth="355.0" prefHeight="432.0" prefWidth="417.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.SettingsScreenController">
+  <children>
+    <Label alignment="CENTER" layoutX="141.0" layoutY="24.0" text="Settings">
+      <font>
+        <Font size="38.0" />
+      </font>
+    </Label>
+    <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="16.0" layoutY="92.0" prefHeight="227.0" prefWidth="185.0" spacing="20.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <HBox prefHeight="21.0" prefWidth="185.0" spacing="10.0">
+              <children>
+                <Label text="Quizzes Folder" />
+                <Button fx:id="ChooseQuizzesFolder" mnemonicParsing="false" onAction="#ChooseQuizzesFolder" text="Choose" />
+              </children>
+            </HBox>
+            <TextField fx:id="QuizzesFolderLocation" editable="false" focusTraversable="false" prefWidth="171.0" />
+          </children>
+        </VBox>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <HBox prefHeight="22.0" prefWidth="185.0" spacing="10.0">
+              <children>
+                <Label alignment="CENTER" text="Map Pack Folder" />
+                <Button fx:id="ChooseMapPackFolder" mnemonicParsing="false" onAction="#ChooseUserMapPackFolder" text="Change" />
+              </children>
+            </HBox>
+            <TextField id="MapPackLocation" fx:id="UserMapPackLocation" editable="false" focusTraversable="false" prefWidth="171.0" />
+          </children>
+        </VBox>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <HBox prefHeight="22.0" prefWidth="185.0" spacing="10.0">
+              <children>
+                <Label alignment="CENTER" text="City Graphic" />
+                <Button fx:id="ChooseCityGraphic" mnemonicParsing="false" onAction="#ChooseCityGraphic" text="Change" />
+              </children>
+            </HBox>
+            <TextField fx:id="CityGraphicLocation" editable="false" focusTraversable="false" prefWidth="171.0" />
+          </children>
+        </VBox>
+      </children>
+    </VBox>
+    <VBox layoutX="232.0" layoutY="118.0" prefHeight="79.0" prefWidth="171.0" spacing="10.0">
+      <children>
+        <Button fx:id="ImportQuiz" mnemonicParsing="false" onAction="#ImportQuiz" prefWidth="171.0" text="Import Quiz" />
+        <Button fx:id="ImportMapPack" mnemonicParsing="false" onAction="#ImportMapPack" prefWidth="171.0" text="Import Map Pack" />
+      </children>
+      <padding>
+        <Insets top="10.0" />
+      </padding>
+    </VBox>
+    <VBox alignment="CENTER" layoutX="116.0" layoutY="328.0" prefHeight="93.0" prefWidth="185.0" spacing="10.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#RestoreDefaultSettings" prefWidth="191.0" text="Restore Default Settings" />
+        <Button fx:id="SettingsHelpButton" mnemonicParsing="false" onAction="#ShowHelp" prefWidth="185.0" text="Help" />
+        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="161.0" spacing="10.0">
+          <children>
+            <Button fx:id="SaveSettings" mnemonicParsing="false" onAction="#SaveSettings" prefWidth="103.0" text="Save Changes" />
+            <Button fx:id="Cancel" mnemonicParsing="false" onAction="#Cancel" prefWidth="72.9998779296875" text="Back" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+    <Separator layoutX="14.0" layoutY="81.0" prefWidth="389.0" />
+    <Separator layoutX="209.0" layoutY="92.0" orientation="VERTICAL" prefHeight="227.0" />
+    <Separator layoutX="14.0" layoutY="325.0" prefWidth="389.0" />
+    <VBox id="VBox" alignment="CENTER" layoutX="218.0" layoutY="229.0" spacing="5.0">
+      <children>
+        <HBox prefHeight="22.0" prefWidth="185.0" spacing="10.0">
+          <children>
+            <Label alignment="CENTER" text="Progress Folder" />
+            <Button fx:id="ChooseProgressFolder" mnemonicParsing="false" onAction="#ChooseProgressFolder" text="Change" />
+          </children>
+        </HBox>
+        <TextField fx:id="ProgressFolderLocation" editable="false" focusTraversable="false" prefWidth="171.0" />
+      </children>
+    </VBox>
+    <MenuBar prefWidth="417.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#ShowHelp" text="How To" />
+            <MenuItem mnemonicParsing="false" onAction="#ShowAbout" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>

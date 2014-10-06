@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="537.0" prefWidth="769.9999000000025" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.MakeQuizController">
+  <children>
+    <TreeView fx:id="tv" focusTraversable="false" layoutX="541.0" layoutY="117.0" prefHeight="379.0" prefWidth="215.0" />
+    <ListView fx:id="lv" focusTraversable="false" layoutX="14.0" layoutY="117.0" prefHeight="379.0" prefWidth="200.00009999999747" />
+    <Label layoutX="519.0" layoutY="77.0" text="Load Map Pack" />
+    <ChoiceBox fx:id="mapPackChoiceBox" focusTraversable="false" layoutX="610.0" layoutY="74.0" prefWidth="132.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <AnchorPane layoutX="269.0" layoutY="438.0" minHeight="83.0" prefHeight="83.0" prefWidth="200.0">
+      <children>
+        <Button focusTraversable="false" layoutX="30.0" layoutY="17.0" mnemonicParsing="false" onAction="#export" text="Export">
+          <font>
+            <Font size="14.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button focusTraversable="false" font="$x1" layoutX="100.0" layoutY="17.0" mnemonicParsing="false" onAction="#TakeIt" text="Take It!" />
+        <Button focusTraversable="false" layoutX="72.0" layoutY="50.0" mnemonicParsing="false" onAction="#backPressed" text="Back" />
+      </children>
+    </AnchorPane>
+    <Label alignment="CENTER" layoutX="239.0" layoutY="216.0" opacity="0.7" prefHeight="108.0" prefWidth="192.0" text="On the left is a list of all included geographical features. Double click a feature to remove it." wrapText="true" />
+    <Label alignment="CENTER" layoutX="321.0" layoutY="323.0" opacity="0.7" prefHeight="108.0" prefWidth="192.0" text="On the right is an outline to help you pick which features you wish to include." wrapText="true" />
+    <MenuBar opacity="0.61" prefWidth="769.9998779296875">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#Clear" text="Reset" />
+            <MenuItem mnemonicParsing="false" onAction="#saveUnfinishedQuiz" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#loadUnfinishedQuiz" text="Open" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#ShowAbout" text="About" />
+            <MenuItem mnemonicParsing="false" onAction="#ShowHelp" text="How To" />
+            <MenuItem mnemonicParsing="false" onAction="#Website" text="Website" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <ChoiceBox fx:id="quizTypeChoiceBox" layoutX="610.0" layoutY="44.0" prefWidth="132.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="528.0" layoutY="46.0" text="Quiz Type" />
+    <Label layoutX="15.0" layoutY="46.0" text="SP Geography">
+      <font>
+        <Font size="32.0" />
+      </font>
+    </Label>
+    <ImageView fitHeight="147.03274988418667" fitWidth="290.8921203613281" layoutX="229.0" layoutY="66.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@Map%20Logo.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Button layoutX="576.0" layoutY="502.0" mnemonicParsing="false" onAction="#AddAll" prefWidth="146.0" text="Add All" />
+    <Button layoutX="42.0" layoutY="502.0" mnemonicParsing="false" onAction="#RemoveAll" prefWidth="146.0" text="Remove All" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="531.0" prefWidth="573.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.PresetQuizController">
+  <center>
+    <SplitPane dividerPositions="0.266199649737303" focusTraversable="true" prefHeight="394.0" prefWidth="386.0">
+      <items>
+        <StackPane prefHeight="529.0" prefWidth="194.0">
+          <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Menu">
+                  <content>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <VBox alignment="CENTER" layoutX="29.0" layoutY="127.0" prefHeight="200.0" prefWidth="60.0">
+                          <children>
+                            <Button mnemonicParsing="false" onAction="#backPressed" text="Back">
+                              <VBox.margin>
+                                <Insets />
+                              </VBox.margin>
+                            </Button>
+                            <Button mnemonicParsing="false" text="Exit" />
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Quiz" />
+              </tabs>
+            </TabPane>
+          </children>
+        </StackPane>
+        <ScrollPane hbarPolicy="ALWAYS" pannable="true" prefHeight="529.0" prefWidth="400.0" vbarPolicy="ALWAYS">
+          <content>
+            <ImageView fitHeight="636.3894834481895" fitWidth="1190.0570678710938" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@BlankMap-World-noborders.png" preserveRatio="false" smooth="false" />
+              </image>
+            </ImageView>
+          </content>
+        </ScrollPane>
+      </items>
+    </SplitPane>
+  </center>
+</BorderPane>

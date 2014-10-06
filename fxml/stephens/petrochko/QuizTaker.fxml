@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="684.0" prefWidth="854.0" xmlns:fx="http://javafx.com/fxml" fx:controller="fxml.stephens.petrochko.QuizTakerController">
+  <center>
+    <ScrollPane fx:id="viewingPane" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="659.0" prefWidth="719.0">
+      <content>
+        <StackPane id="stackPane" fx:id="targetStackPane" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
+          <children>
+            <ImageView id="viewer" fx:id="background" fitHeight="536.7499989599712" fitWidth="715.6666870117188" pickOnBounds="true" preserveRatio="true" />
+          </children>
+        </StackPane>
+      </content>
+    </ScrollPane>
+  </center>
+  <left>
+    <TabPane fx:id="tabPane" prefHeight="659.0" prefWidth="233.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab fx:id="mainTab" text="Main">
+          <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+              <bottom>
+                <VBox alignment="TOP_CENTER" prefHeight="128.0" prefWidth="194.0" spacing="10.0">
+                  <children>
+                    <Button fx:id="BeginQuizButton" mnemonicParsing="false" onAction="#BeginQuiz" prefWidth="157.0" text="Begin Quiz" />
+                    <Button fx:id="StartOverButton" contentDisplay="TOP" disable="true" mnemonicParsing="false" onAction="#StartOver" prefWidth="157.0" text="Start Over" />
+                    <Button fx:id="SaveProgressButton" disable="true" mnemonicParsing="false" prefWidth="157.0" text="Save Progress">
+                      <VBox.margin>
+                        <Insets />
+                      </VBox.margin>
+                    </Button>
+                    <HBox alignment="TOP_CENTER" prefHeight="34.0" prefWidth="151.0" spacing="10.0">
+                      <children>
+                        <Button mnemonicParsing="false" onAction="#Back" prefWidth="50.0" text="Main" />
+                        <Button mnemonicParsing="false" onAction="#Exit" prefWidth="50.0" text="Exit" />
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </bottom>
+              <top>
+                <VBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="233.0" spacing="20.0">
+                  <children>
+                    <Label fx:id="QuizName" alignment="CENTER" prefWidth="213.0" text="Quiz Name">
+                      <font>
+                        <Font name="System Bold" size="22.0" fx:id="x2" />
+                      </font>
+                    </Label>
+                    <VBox alignment="CENTER" prefHeight="57.0" prefWidth="167.0" spacing="10.0">
+                      <children>
+                        <Label fx:id="QuizType" text="Drag-Drop">
+                          <font>
+                            <Font size="18.0" fx:id="x1" />
+                          </font>
+                        </Label>
+                      </children>
+                    </VBox>
+                  </children>
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                </VBox>
+              </top>
+            </BorderPane>
+          </content>
+        </Tab>
+        <Tab fx:id="quizTab" disable="true" text="Quiz">
+          <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+              <bottom>
+                <HBox alignment="TOP_CENTER" prefHeight="59.0" prefWidth="233.0">
+                  <children>
+                    <Button mnemonicParsing="false" onAction="#GiveUp" prefWidth="196.0" text="Give Up" />
+                  </children>
+                  <padding>
+                    <Insets bottom="10.0" top="10.0" />
+                  </padding>
+                </HBox>
+              </bottom>
+              <center>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                  <children>
+                    <VBox alignment="CENTER" prefHeight="362.0" prefWidth="233.0" spacing="10.0">
+                      <children>
+                        <Label fx:id="currentElementName" text="Current Element">
+                          <font>
+                            <Font size="20.0" fx:id="x3" />
+                          </font>
+                        </Label>
+                        <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="233.0" vbarPolicy="NEVER">
+                          <content>
+                            <VBox alignment="CENTER" prefHeight="197.0" prefWidth="231.0">
+                              <children>
+                                <ImageView id="currentElement" fx:id="currentElementImageView" fitHeight="163.5" fitWidth="218.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="SOMETIMES" />
+                              </children>
+                            </VBox>
+                          </content>
+                        </ScrollPane>
+                        <VBox fx:id="NotificationArea" alignment="CENTER" prefHeight="27.0" prefWidth="205.0" />
+                      </children>
+                    </VBox>
+                  </children>
+                  <padding>
+                    <Insets top="60.0" />
+                  </padding>
+                </VBox>
+              </center>
+              <top>
+                <VBox alignment="CENTER" prefHeight="102.0" prefWidth="167.0" spacing="10.0">
+                  <children>
+                    <Label fx:id="PercentComplete" font="$x3" text="\% Complete" />
+                    <Label fx:id="PercentCorrect" font="$x3" text="\% Correct" />
+                  </children>
+                </VBox>
+              </top>
+            </BorderPane>
+          </content>
+        </Tab>
+        <Tab fx:id="roundTab" disable="true" text="Round">
+          <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+              <bottom>
+                <VBox alignment="TOP_CENTER" prefHeight="81.0" prefWidth="150.0" spacing="10.0">
+                  <children>
+                    <Button fx:id="RetakeQuizButton" disable="true" mnemonicParsing="false" onAction="#StartOver" prefWidth="176.0" text="Retake Quiz" />
+                    <Button fx:id="PracticeMissedButton" disable="true" mnemonicParsing="false" onAction="#PracticeMissed" prefWidth="176.0" text="Practice Missed" />
+                  </children>
+                  <padding>
+                    <Insets top="10.0" />
+                  </padding>
+                </VBox>
+              </bottom>
+              <center>
+                <VBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="187.0" spacing="16.0">
+                  <children>
+                    <Label fx:id="Timer" opacity="0.75" text="00:00:00" />
+                    <HBox prefHeight="20.999908447265625" prefWidth="187.0">
+                      <children>
+                        <Label text="Correct" />
+                      </children>
+                    </HBox>
+                    <ListView fx:id="CorrectElementsListView" prefHeight="145.0" prefWidth="187.0" />
+                    <HBox prefHeight="21.0" prefWidth="187.0">
+                      <children>
+                        <Label text="Incorrect" />
+                      </children>
+                    </HBox>
+                    <ListView fx:id="IncorrectElementsListView" prefHeight="145.0" prefWidth="187.0" />
+                  </children>
+                  <padding>
+                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                  </padding>
+                </VBox>
+              </center>
+              <top>
+                <HBox alignment="CENTER" prefHeight="61.0" prefWidth="149.0">
+                  <children>
+                    <Label text="Round">
+                      <font>
+                        <Font size="24.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </HBox>
+              </top>
+            </BorderPane>
+          </content>
+        </Tab>
+        <Tab fx:id="aboutTab" text="About">
+          <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+              <bottom>
+                <VBox prefHeight="78.0" prefWidth="233.0">
+                  <children>
+                    <Label prefHeight="37.0" prefWidth="233.0" text="For feedback, contact at:" />
+                    <Label text="tpetr14@germantownacademy.org" />
+                  </children>
+                  <padding>
+                    <Insets left="15.0" right="15.0" />
+                  </padding>
+                </VBox>
+              </bottom>
+              <center>
+                <TextArea editable="false" prefHeight="472.0" prefWidth="200.0" text="&#9;This project was created by Tyler Petrochko as a three-year Academy Scholars project at Germantown Academy, with help from history teacher Mark Stephens, 1760.&#10;&#10;&#9;Tyler is an avid programmer, electronics-tinkerer, and wrestler, and plans to pursue a career in computer science. His past projects include a prototype Binary Array Linked-List Data structure, and an External Server Verification Method to Prevent Against SSL-Stripping.&#10;&#10;&#9;&#10;&#10;&#10;&#10;" wrapText="true" />
+              </center>
+              <top>
+                <VBox alignment="CENTER" prefHeight="86.0" prefWidth="233.0">
+                  <children>
+                    <Label font="$x2" text="Stephens-Petrochko" />
+                    <Label alignment="TOP_CENTER" text="An Academy-Scholars Project">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </VBox>
+              </top>
+            </BorderPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </left>
+  <top>
+    <MenuBar prefHeight="27.0" prefWidth="951.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#ToggleFullScreen" text="Full Screen" />
+            <MenuItem mnemonicParsing="false" onAction="#ShowHelp" text="How To" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>
